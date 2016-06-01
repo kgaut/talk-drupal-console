@@ -237,6 +237,24 @@ php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar
 						<p>Note : Ajouter --override pour les re-générer</p>
 						<img src="img/drupal-init.png" />
 					</section>
+					<section>
+						<h1>Démo Kickstart Drupal 8</h1>
+						<pre><code>
+	drupal chain --file=~/.console/chain/quick-start.yml
+						</code></pre>
+						<p>Commande chainée :</p>
+						<ul>
+							<li>Téléchargement dernière version drupal</li>
+							<li>Installation</li>
+							<li>Lancement du serveur interne PHP</li>
+						</ul>
+					</section>
+					<section>
+						<h1>Démo Kickstart Configuré</h1>
+						<pre><code>
+	drupal chain --file=~/.console/chain/quick-start-custom.yml
+						</code></pre>
+					</section>
 				</section>
 			</div>
 		</div>
