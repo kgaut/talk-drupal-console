@@ -93,6 +93,58 @@ class MaClass {
 							</code></pre>
 						</div>
 					</section>
+					<section>
+						<h1>Des outils</h1>
+						<p>Module builder, associé à drush</p>
+						<pre><code>drush @alias mb mon_module --write</code></pre>
+						<ul>
+							<li>Gestion des dépendances</li>
+							<li>Pré-configuration de hook</li>
+							<li>...</li>
+						</ul>
+					</section>
+					<section>
+						<h1>Mais au final...</h1>
+						<ul>
+							<li class="fragment">Création à la main</li>
+							<li class="fragment">copier/coller depuis d'autres modules</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Drupal 8, qu'est ce qui change ?</h1>
+						<h2 class="fragment">Spoiler : tout</h2>
+					</section>
+					<section>
+						<h1>Enfin presque...</h1>
+						<div class="half">
+							mon_module.info.yml
+						</div>
+						<div class="half">
+							mon_module.module
+						</div>
+					</section>
+					<section>
+						<h1>Mais quand même</h1>
+						<p>Norme PSR2 => impose une architecture</p>
+						<pre><code>
+mon_module/
+	src/
+		Controller/
+			MonModule.php
+		Entity/
+			Controller/
+			Form/
+		Form/
+		Plugin/
+		Test/
+	mon_module.info.yml
+	mon_module.libraries.yml
+	mon_module.service.yml
+	mon_module.module
+						</code></pre>
+					</section>
 				</section>
 			</div>
 		</div>
