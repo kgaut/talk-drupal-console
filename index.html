@@ -205,10 +205,19 @@ mon_module/
 					</section>
 					<section>
 						<h1>Installation</h1>
+						<h2>GNU/Linux & MacOS</h2>
 						<pre><code>
 curl https://drupalconsole.com/installer -L -o drupal.phar
 sudo mv drupal.phar /usr/local/bin/drupal
 sudo chmod +x /usr/local/bin/drupal
+						</code></pre>
+					</section>
+					<section>
+						<h1>Installation</h1>
+						<h2>Windows</h2>
+						Dans le dossier des binaires de php :
+						<pre><code>
+php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar
 						</code></pre>
 					</section>
 				</section>
