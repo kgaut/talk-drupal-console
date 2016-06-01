@@ -26,20 +26,74 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Drupal Console</h1>
-					<h2>Drupal Camp Nantes - 11 Juin 2016</h2>
+					<section>
+						<h1>Drupal Console</h1>
+						<h2>Drupal Camp Nantes - 11 Juin 2016</h2>
+					</section>
+					<section>
+						<h1>$ whois</h1>
+						<h3>Kevin Gautreau</h3>
+						<ul>
+							<li>Développeur web freelance</li>
+							<li>PHP / Spécialisé drupal</li>
+							<li>Github / Twitter : <a href="https://www.twitter.com/kgaut">@kgaut</a></li>
+							<li>Site : <a href="https://kgaut.net">https://kgaut.net</a></li>
+						</ul>
+					</section>
+					<section>
+						<h1>Plan</h1>
+						<ul>
+							<li>Drupal 7 - c'était pas si mal</li>
+							<li>Drupal 8 - qu'est-ce qui change ?</li>
+						</ul>
+					</section>
 				</section>
 				<section>
-					<h1>$ whois</h1>
-					<h3>Kevin Gautreau</h3>
-					<ul>
-						<li>Développeur web freelance</li>
-						<li>PHP / Spécialisé drupal</li>
-						<li>Github / Twitter : <a href="https://www.twitter.com/kgaut">@kgaut</a></li>
-						<li>Site : <a href="https://kgaut.net">https://kgaut.net</a></li>
-					</ul>
+					<section>
+						<h1>Drupal 7</h1>
+						<h2>Finalement c'était pas si mal</h2>
+						<img class="no-border" src="img/Trollface.png" />
+					</section>
+					<section>
+						<h1>Un module Drupal 7</h1>
+						<div class="half">
+							mon_module.info
+						</div>
+						<div class="half">
+							mon_module.module
+						</div>
+					</section>
+					<section>
+						<h1>*.module trop long ?</h1>
+						<div class="half">
+							mon_module.info
+							files[] = mon_module.front.inc
+						</div>
+						<div class="half">
+							mon_module.front.inc
+							<pre><code data-trim data-noescape>
+mon_module_HOOK() {
+	...
+}
+							</code></pre>
+						</div>
+					</section>
+					<section>
+						<h1>Un poil de POO ?</h1>
+						<div class="half">
+							mon_module.info
+							files[] = maclasse.class.inc
+						</div>
+						<div class="half">
+							maclasse.class.inc
+							<pre><code data-trim data-noescape>
+class MaClass {
+	...
+}
+							</code></pre>
+						</div>
+					</section>
 				</section>
-				<section>Slide 2</section>
 			</div>
 		</div>
 
