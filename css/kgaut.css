@@ -13,33 +13,38 @@
 .color5 {
   color: #00FF99; }
 
-section pre.large {
+.reveal section pre.large {
   width: 100%; }
 
-section code {
+.reveal section code {
   border-radius: 15px; }
 
-section img {
+.reveal section img {
   border-radius: 15px; }
-  section img#img-svg {
+  .reveal section img.no-border {
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none; }
+  .reveal section img#img-svg {
     background-color: white; }
-  section img.current-visible {
+  .reveal section img.current-visible {
     height: 0; }
-    section img.current-visible.current-fragment {
+    .reveal section img.current-visible.current-fragment {
       height: auto; }
 
-section .half {
+.reveal section .half {
   width: 49%; }
-  section .half:first-of-type {
+  .reveal section .half:first-of-type {
     float: left; }
-  section .half:last-of-type {
+  .reveal section .half:last-of-type {
     float: right; }
 
-section .third {
+.reveal section .third {
   width: 31%;
   float: left;
   margin: 0 2px; }
-  section .third:first-of-type {
+  .reveal section .third:first-of-type {
     margin-left: 0; }
-  section .third:last-of-type {
+  .reveal section .third:last-of-type {
     margin-right: 0; }
