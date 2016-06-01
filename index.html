@@ -220,6 +220,23 @@ sudo chmod +x /usr/local/bin/drupal
 php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar
 						</code></pre>
 					</section>
+					<section>
+						<h1>Premier test</h1>
+						<pre><code>
+	drupal check
+						</code></pre>
+						<p class="fragment">Si tout va bien, c'est bien</p>
+						<p class="fragment">Sinon, affichage des extensions php manquantes (php-curl entre autres)</p>
+						<img class="fragment" src="img/drupal-check.png" />
+					</section>
+					<section>
+						<h1>Génération des fichiers de config</h1>
+						<pre><code>
+	drupal init
+						</code></pre>
+						<p>Note : Ajouter --override pour les re-générer</p>
+						<img src="img/drupal-init.png" />
+					</section>
 				</section>
 			</div>
 		</div>
