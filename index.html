@@ -64,10 +64,11 @@
 					</section>
 					<section>
 						<h1>Un module Drupal 7</h1>
-						<div class="half">
+						<h2 class="fragment">= 2 fichiers</h2>
+						<div class="half fragment">
 							mon_module.info
 						</div>
-						<div class="half">
+						<div class="half fragment">
 							mon_module.module
 						</div>
 					</section>
@@ -75,7 +76,9 @@
 						<h1>*.module trop long ?</h1>
 						<div class="half">
 							mon_module.info
-							files[] = mon_module.front.inc
+							<pre><code data-trim data-noescape>
+files[] = mon_module.front.inc
+							</code></pre>
 						</div>
 						<div class="half">
 							mon_module.front.inc
