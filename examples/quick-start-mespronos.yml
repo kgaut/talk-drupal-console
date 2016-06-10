@@ -1,0 +1,37 @@
+commands:
+# Download Drupal
+  - command: site:new
+    arguments:
+      directory: 'mespronos-test.dev'
+    options:
+      latest: 'true'
+# Install Drupal
+  - command: site:install
+    options:
+      langcode: fr
+      db-type: 'mysql'
+      db-host: '127.0.0.1'
+      db-name: '%{{db_name|mespronos-test.dev}}'
+      db-user: 'root'
+      db-pass: 'mysql'
+      db-port: '3306'
+      site-name: 'Mon Super Site D8'
+      site-mail: admin@example.com
+      account-name: kgaut
+      account-mail: contact@kgaut.net
+      account-pass: password
+    arguments:
+      profile: standard
+# Install modules
+  - command: module:install
+    arguments:
+      module:
+        - big_pipe
+        - pathauto
+        - mespronos
+# Rebuild caches
+  - command: cache:rebuild
+    arguments:
+      cache: all
+# Start php built-in server
+  - command: server
