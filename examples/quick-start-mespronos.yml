@@ -2,33 +2,32 @@ commands:
 # Download Drupal
   - command: site:new
     arguments:
-      directory: 'mespronos-test.dev'
+      directory: '%{{directory|mespronos-test.dev}}'
     options:
       latest: 'true'
 # Install Drupal
   - command: site:install
     options:
       langcode: fr
-      db-type: 'mysql'
-      db-host: '127.0.0.1'
-      db-name: '%{{db_name|mespronos-test.dev}}'
-      db-user: 'root'
-      db-pass: 'mysql'
-      db-port: '3306'
+      db-type: sqlite
+      db-file: sites/default/files/.ht.sqlite
       site-name: 'Mon Super Site D8'
-      site-mail: admin@example.com
+      site-mail: contact@mespronos.net
       account-name: kgaut
-      account-mail: contact@kgaut.net
+      account-mail: contact@mespronos.net
       account-pass: password
     arguments:
       profile: standard
 # Install modules
+  - command: module:download
+    arguments:
+      module:
+        - mespronos
   - command: module:install
     arguments:
       module:
-        - big_pipe
-        - pathauto
         - mespronos
+        - mespronos_group
 # Rebuild caches
   - command: cache:rebuild
     arguments:
