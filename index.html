@@ -330,9 +330,10 @@ php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar
 				</section>
 				<section>
 					<section>
-						<h1>Console vs Drush</h1>
+						<h1>Console vs Drush (vs Composer)</h1>
 					</section>
 					<section data-autoslide="1000">
+						<h1>Drupal console remplace Drush ?</h1>
 						<h1>TL;DR : non</h1>
 						<p class="fragment" data-autoslide="1000">Pour l'instant non.</p>
 						<p class="fragment" data-autoslide="0">À terme ? fusion ?</p>
@@ -341,6 +342,21 @@ php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar
 						<h1>Mon usage</h1>
 						<p class="fragment" data-autoslide="1000">Opération de management de projet : Drush</p>
 						<p class="fragment" data-autoslide="0">Scaffolding / Génération : Console</p>
+						<p class="fragment" data-autoslide="1000">Modules tiers, patchs : Composer <span class="fragment" data-autoslide="1000"><em>(pour l'instant ?)</em></span></p>
+					</section>
+					<section data-autoslide="1000">
+						<h1>Script de déploiement</h1>
+						<pre><code>
+git pull origin master
+composer install
+drush cr
+drush entity-updates
+drush updatedb
+drush config-import
+drush cache-rebuild
+						</code></pre>
+
+
 					</section>
 				</section>
 				<section>
