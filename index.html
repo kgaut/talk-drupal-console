@@ -257,14 +257,14 @@ sudo chmod +x /usr/local/bin/drupal
 php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar
 						</code></pre>
 					</section>
-					<section>
+					<section data-autoslide="1000">
 						<h1>Premier test</h1>
 						<pre><code>
 	drupal check
 						</code></pre>
-						<p class="fragment">Si tout va bien, c'est bien</p>
-						<p class="fragment">Sinon, affichage des extensions php manquantes (php-curl entre autres)</p>
-						<img class="fragment" src="img/drupal-check.png" />
+						<p class="fragment" data-autoslide="1000">Si tout va bien, c'est bien</p>
+						<p class="fragment" data-autoslide="1000">Sinon, affichage des extensions php manquantes (php-curl entre autres)</p>
+						<img class="fragment" src="img/drupal-check.png"  data-autoslide="0" />
 					</section>
 					<section>
 						<h1>Génération des fichiers de config</h1>
@@ -334,7 +334,6 @@ php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar
 					<section>
 						<h1>Installation de module</h1>
 						<pre><code>drupal module:install pathauto</code></pre>
-						<p>Attention : mieux vaut utiliser composer (pour l'instant)</p>
 					</section>
 					<section>
 						<h1>Installation d'une nouvelle langue</h1>
@@ -369,9 +368,9 @@ php -r "readfile('https://drupalconsole.com/installer');" > drupal.phar
 						<h1>Mon usage</h1>
 						<p class="fragment" data-autoslide="1000">Opération de management de projet : Drush</p>
 						<p class="fragment" data-autoslide="1000">Scaffolding / Génération : Console</p>
-						<p class="fragment" data-autoslide="0">Modules tiers, patchs : Composer <span class="fragment" data-autoslide="1000"><em>(pour l'instant ?)</em></span></p>
+						<p class="fragment" data-autoslide="1000">Modules tiers, patchs : Composer <span class="fragment" data-autoslide="0"><em>(pour l'instant ?)</em></span></p>
 					</section>
-					<section data-autoslide="1000">
+					<section>
 						<h1>Script de déploiement</h1>
 						<pre><code>
 git pull origin master
