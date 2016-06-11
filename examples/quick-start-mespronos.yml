@@ -19,6 +19,10 @@ commands:
     arguments:
       profile: standard
 # Install modules
+  - command: module:install
+    arguments:
+      module:
+        - ctools
   - command: module:download
     arguments:
       module:

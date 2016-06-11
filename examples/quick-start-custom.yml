@@ -3,30 +3,27 @@ commands:
   - command: site:new
     arguments:
       directory: 'drupal8.dev'
+      directory: '%{{directory|drupal8.dev}}'
     options:
       latest: 'true'
 # Install Drupal
   - command: site:install
     options:
       langcode: fr
-      db-type: '%{{db_type|mysql}}'
-      db-host: '%{{db_host|127.0.0.1}}'
-      db-name: '%{{db_name|drupal}}'
-      db-user: '%{{db_user|root}}'
-      db-pass: '%{{db_pass|mysql}}'
-      db-port: '%{{db_port|3306}}'
-      site-name: 'Mon Super Site D8'
+      db-type: sqlite
+      db-file: sites/default/files/.ht.sqlite
+      site-name: 'Awesome website'
       site-mail: admin@example.com
-      account-name: kgaut
-      account-mail: contact@kgaut.net
+      account-name: me
+      account-mail: me@email.net
       account-pass: password
     arguments:
       profile: standard
 # Install modules
-  - command: module:download
+  - command: module:install
     arguments:
       module:
-        - pathauto
+        - ctools
   - command: module:install
     arguments:
       module:
